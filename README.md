@@ -16,17 +16,18 @@ mkdir ~/cookbooks
 cd ~/cookbooks
 git clone https://github.com/pivotal/pivotal_workstation
 git clone https://github.com/opscode-cookbooks/dmg
+git clone https://github.com/fnichol/chef-zip_app.git
 cat > ~/soloistrc <<EOF
 cookbook_paths:
 - cookbooks
 recipes:
-- pivotal_workstation::meta_osx_base
-- pivotal_workstation::meta_osx_development
-- pivotal_workstation::meta_ruby_development
+- pivotal_workstation::meta_myosx
 EOF
 gem install soloist
 soloist
 ```
+
+Thereafter you can just run 'soloist' in the cookbooks directory to run the cookbook again.
 
 Configuration
 -------------
